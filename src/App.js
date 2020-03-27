@@ -21,11 +21,11 @@ function App() {
         console.log("data.data.search is: ", data.data.Search);
         console.log("api url is", apiurl)
         if (data.data.Search === undefined) {
-          
-          let results = apiurl + "&s=";
+          alert("error! invalid search")
           setState(prevState => {
-            return { ...prevState, results: results };
+            return { ...prevState };
           });
+
         }
 
         let results = data.data.Search;
