@@ -14,19 +14,19 @@ function App() {
   const apiurl = "http://www.omdbapi.com/?apikey=3d903a27";
 
   async function search(e) {
-    try { 
-    if (e.key === "Enter") {
-      const data = await axios(apiurl + "&s=" + state.s)
+    try {
+      if (e.key === "Enter") {
+        const data = await axios(apiurl + "&s=" + state.s);
         let results = data.data.Search;
 
         setState(prevState => {
           return { ...prevState, results: results };
         });
-      };
+      }
     } catch (err) {
-    console.log(err)
+      console.log(err);
+    }
   }
-}
 
   const handleInput = e => {
     let s = e.target.value;
@@ -36,17 +36,19 @@ function App() {
     });
   };
 
-  const openPopup = id => {
-    axios(apiurl + "&i=" + id).then(({ data }) => {
-      let result = data;
+  async function openPopup(id) {
+    try {
+     const data = await axios(apiurl + "&i=" + id)
+        let result = data.data;
 
-      console.log(result);
-
-      setState(prevState => {
-        return { ...prevState, selected: result };
-      });
-    });
-  };
+        setState(prevState => {
+          return { ...prevState, selected: result };
+        });
+      ;
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   const closePopup = () => {
     setState(prevState => {
