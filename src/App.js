@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Search from "./components/Search";
 import Results from "./components/Results";
+import Popup from "./components/Popups";
 
 function App() {
   const [state, setState] = useState({ s: "", results: [], selected: {} });
@@ -39,9 +40,9 @@ function App() {
 
   const closePopup = () => {
     setState(prevState => {
-      return { ...prevState, selected: {}}
-    })
-  }
+      return { ...prevState, selected: {} };
+    });
+  };
   return (
     <div className="App">
       <header className="App">
@@ -49,7 +50,14 @@ function App() {
       </header>
       <main>
         <Search handleInput={handleInput} search={search} />
-        <Results results={state.results} />
+
+        <Results results={state.results} openPopup={openPopup} />
+
+        {typeof state.selected.Title != "undefined" ? (
+          <Popup selected={state.selected} closePopup={closePopup} />
+        ) : (
+          false
+        )}
       </main>
     </div>
   );
