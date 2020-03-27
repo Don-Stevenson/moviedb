@@ -17,6 +17,17 @@ function App() {
     try {
       if (e.key === "Enter") {
         const data = await axios(apiurl + "&s=" + state.s);
+        console.log("state.s is", state.s);
+        console.log("data.data.search is: ", data.data.Search);
+        console.log("api url is", apiurl)
+        if (data.data.Search === undefined) {
+          
+          let results = apiurl + "&s=";
+          setState(prevState => {
+            return { ...prevState, results: results };
+          });
+        }
+
         let results = data.data.Search;
 
         setState(prevState => {
@@ -38,13 +49,12 @@ function App() {
 
   async function openPopup(id) {
     try {
-     const data = await axios(apiurl + "&i=" + id)
-        let result = data.data;
+      const data = await axios(apiurl + "&i=" + id);
+      let result = data.data;
 
-        setState(prevState => {
-          return { ...prevState, selected: result };
-        });
-      ;
+      setState(prevState => {
+        return { ...prevState, selected: result };
+      });
     } catch (err) {
       console.log(err);
     }
