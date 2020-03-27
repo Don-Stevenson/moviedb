@@ -1,3 +1,8 @@
+# MovieDB
+This is a simple react project that uses an IMDB api to return results to the user. Users can click on the results for a popup with more information
+
+made via following a tutorial by [Tyler Potts](https://github.com/TylerPottsDev/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
