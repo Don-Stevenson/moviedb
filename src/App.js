@@ -13,22 +13,20 @@ function App() {
   });
   const apiurl = "http://www.omdbapi.com/?apikey=3d903a27";
 
-  const search = e => {
+  async function search(e) {
+    try { 
     if (e.key === "Enter") {
-      axios(apiurl + "&s=" + state.s).then(({ data }) => {
-        if (data.search === undefined) {
-          alert("Error! please enter a valid title");
-        } else {
-          console.log("data is", data.search);
-          let results = data.Search;
+      const data = await axios(apiurl + "&s=" + state.s)
+        let results = data.data.Search;
 
-          setState(prevState => {
-            return { ...prevState, results: results };
-          });
-        }
-      });
-    }
-  };
+        setState(prevState => {
+          return { ...prevState, results: results };
+        });
+      };
+    } catch (err) {
+    console.log(err)
+  }
+}
 
   const handleInput = e => {
     let s = e.target.value;
