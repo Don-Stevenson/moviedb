@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import axios from "axios";
+
 import Search from "./components/Search";
 import Results from "./components/Results";
 import Popup from "./components/Popups";
@@ -21,6 +21,7 @@ function App() {
       });
     }
   };
+
   const handleInput = e => {
     let s = e.target.value;
 
@@ -45,7 +46,7 @@ function App() {
   };
   return (
     <div className="App">
-      <header className="App">
+      <header>
         <h1>Movie Database</h1>
       </header>
       <main>
@@ -53,11 +54,11 @@ function App() {
 
         <Results results={state.results} openPopup={openPopup} />
 
-        {typeof state.selected.Title != "undefined" ? (
+        {(typeof state.selected.Title != "undefined") ? 
           <Popup selected={state.selected} closePopup={closePopup} />
-        ) : (
+        : 
           false
-        )}
+        }
       </main>
     </div>
   );
