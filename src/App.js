@@ -17,11 +17,11 @@ function App() {
     try {
       if (e.key === "Enter") {
         const data = await axios(apiurl + "&s=" + state.s);
-        console.log("state.s is", state.s);
-        console.log("data.data.search is: ", data.data.Search);
-        console.log("api url is", apiurl)
+        // console.log("state.s is", state.s);
+        // console.log("data.data.search is: ", data.data.Search);
+        // console.log("api url is", apiurl)
         if (data.data.Search === undefined) {
-          alert("error! invalid search")
+          console.log("error! invalid search")
           setState(prevState => {
             return { ...prevState };
           });
