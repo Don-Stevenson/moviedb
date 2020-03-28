@@ -3,6 +3,27 @@ This is a simple react project that uses an IMDB api to return results to the us
 
 Based on a tutorial following a tutorial by [Tyler Potts](https://github.com/TylerPottsDev/) with some additional features including async await and handling empty search results.
 
+
+
+This Movie Database looks like:
+
+<b>Home Page</b>
+
+!["Home Page"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
+
+<b>Home Page</b>
+
+!["Home Page"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
+
+<b>Home Page</b>
+
+!["Home Page"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
+
+<b>Home Page</b>
+
+!["Home Page"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
