@@ -15,13 +15,13 @@ This Movie Database looks like:
 
 !["Search Results"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
 
-<b>Home Page</b>
+<b>Popup Page</b>
 
-!["Home Page"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
+!["Popup page for a particular movie"](https://github.com/Don-Stevenson/moviedb/blob/c83b18bc712c2c197ccefaf59c7c6aeda33cc571/docs/popup%20window%20MovieDB.png)
 
-<b>Home Page</b>
+<b>No Results</b>
 
-!["Home Page"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
+!["No Results"](https://github.com/Don-Stevenson/moviedb/blob/c83b18bc712c2c197ccefaf59c7c6aeda33cc571/docs/no%20results%20found%20Movie%20DB.png)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
