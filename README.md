@@ -9,11 +9,11 @@ This Movie Database looks like:
 
 <b>Home Page</b>
 
-!["Home Page"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
+!["Home Page"](https://github.com/Don-Stevenson/moviedb/blob/c83b18bc712c2c197ccefaf59c7c6aeda33cc571/docs/homepage%20movieDB.png)
 
 <b>Home Page</b>
 
-!["Home Page"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
+!["Search Results"](https://github.com/Don-Stevenson/Jungle-Rails/blob/master/docs/Login%202020-02-12%2013-40-41.png)
 
 <b>Home Page</b>
 
