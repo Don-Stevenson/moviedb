@@ -17,13 +17,6 @@ function App() {
     try {
       if (e.key === "Enter") {
         const data = await axios(apiurl + "&s=" + state.s);
-        if (data.data.Search === undefined) {
-          console.log("error! Empty Search! Please try again.");
-          setState(prevState => {
-            return { ...prevState };
-          });
-        }
-
         let results = data.data.Search;
 
         setState(prevState => {
