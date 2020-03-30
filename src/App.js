@@ -4,7 +4,6 @@ import axios from "axios";
 import Search from "./components/Search";
 import Results from "./components/Results";
 import Popup from "./components/Popup";
-const movieApiKey = process.env.movieApiKey;
 
 function App() {
   const [state, setState] = useState({
@@ -12,7 +11,7 @@ function App() {
     results: [],
     selected: {}
   });
-  const apiurl = "http://www.omdbapi.com/?apikey=" + movieApiKey;
+  const apiurl = "http://www.omdbapi.com/?apikey=3d903a27";
 
   async function search(e) {
     try {
