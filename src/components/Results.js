@@ -10,7 +10,7 @@ function Results({ results, openPopup }) {
         ))
       ) : (
         <header>
-          <h2> No Results! Please enter another movie </h2>
+          <h2> No Results! Please enter another movie. </h2>
         </header>
       )}
     </section>
