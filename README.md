@@ -1,11 +1,10 @@
 # MovieDB
+
 This is a simple react project that uses an IMDB api to return results to the user. Users can click on the results for a popup with more information.
 
 Based on a tutorial following a tutorial by [Tyler Potts](https://github.com/TylerPottsDev/) with some additional features including async await and handling empty search results.
 
-
-
-This Movie Database looks like:
+This is what Movie Database looks like:
 
 <b>Home Page</b>
 
@@ -22,7 +21,6 @@ This Movie Database looks like:
 <b>No Results</b>
 
 !["No Results"](https://github.com/Don-Stevenson/moviedb/blob/c83b18bc712c2c197ccefaf59c7c6aeda33cc571/docs/no%20results%20found%20Movie%20DB.png)
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
