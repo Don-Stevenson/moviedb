@@ -4,15 +4,6 @@ import altImage from "../images/no-image-available.png"
 function Result({ result, openPopup }) {
   return (
     <div className="result" onClick={() => openPopup(result.imdbID)}>
-      {/* <img src={result.Poster} alt={result.Title} />
-
-      <img
-        src={result.Poster}
-        onerror="this.onerror=null; 
-      this.src={result.Poster};"
-        alt={result.Title}
-      /> */}
-
       <img
         src={result.Poster}
         onError={e => {
