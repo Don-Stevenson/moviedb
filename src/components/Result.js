@@ -1,5 +1,5 @@
 import React from "react";
-import altImage from "../images/no-image-available.png"
+import noImageAvailable from "../images/no-image-available.png"
 
 function Result({ result, openPopup }) {
   return (
@@ -8,7 +8,7 @@ function Result({ result, openPopup }) {
         src={result.Poster}
         onError={e => {
           e.target.onerror = null;
-          e.target.src = altImage;
+          e.target.src = noImageAvailable;
         }}
         alt={result.Title}
       />

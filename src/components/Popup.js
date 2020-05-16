@@ -1,5 +1,5 @@
 import React from "react";
-import altImage from "../images/no-image-available.png";
+import noImageAvailable from "../images/no-image-available.png";
 
 function Popup({ selected, closePopup }) {
   return (
@@ -10,12 +10,11 @@ function Popup({ selected, closePopup }) {
         </h2>
         <p className="rating">Rating: {selected.imdbRating}</p>
         <div className="plot">
-          {/* <img src={selected.Poster} alt={selected.Title} /> */}
           <img
             src={selected.Poster}
             onError={e => {
               e.target.onerror = null;
-              e.target.src = altImage;
+              e.target.src = noImageAvailable;
             }}
             alt={selected.Title}
           />
