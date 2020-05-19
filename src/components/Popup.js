@@ -1,5 +1,5 @@
 import React from "react";
-import noImageAvailable from "../images/no-image-available.png";
+import noImageAvailablePlaceHolder from "../images/no-image-available.png";
 
 function Popup({ selected, closePopup }) {
   return (
@@ -14,7 +14,7 @@ function Popup({ selected, closePopup }) {
             src={selected.Poster}
             onError={e => {
               e.target.onerror = null;
-              e.target.src = noImageAvailable;
+              e.target.src = noImageAvailablePlaceHolder;
             }}
             alt={selected.Title}
           />
