@@ -5,6 +5,14 @@ import Search from "./components/Search";
 import Results from "./components/Results";
 import Popup from "./components/Popup";
 
+const dotenv = require("dotenv");
+
+
+// setup dotenv options
+dotenv.config({
+  path: "./.env"
+});
+
 function App() {
   const [state, setState] = useState({
     s: "",
