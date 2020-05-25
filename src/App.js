@@ -7,10 +7,9 @@ import Popup from "./components/Popup";
 
 const dotenv = require("dotenv");
 
-
 // setup dotenv options
 dotenv.config({
-  path: "./.env.development"
+  path: "./.env"
 });
 
 function App() {
@@ -19,7 +18,8 @@ function App() {
     results: [],
     selected: {}
   });
-  const apiurl = "http://www.omdbapi.com/?apikey=3d903a27";
+  const apiurl = process.env.MOVIE_API_KEY;
+  console.log("api url is", apiurl);
 
   // use setstate to take in the search query
   //****************************************/
