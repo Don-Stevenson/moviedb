@@ -18,8 +18,8 @@ function App() {
     results: [],
     selected: {}
   });
-  const apiurl = process.env.MOVIE_API_KEY;
-  console.log("api url is", apiurl);
+  const apiURL = process.env.MOVIE_API_KEY;
+  console.log("api url is", apiURL);
 
   // use setstate to take in the search query
   //****************************************/
@@ -36,7 +36,7 @@ function App() {
   async function search(e) {
     try {
       if (e.key === "Enter") {
-        const data = await axios(apiurl + "&s=" + state.s);
+        const data = await axios(apiURL + "&s=" + state.s);
         let results = data.data.Search;
         setState(prevState => {
           return { ...prevState, results: results };
@@ -52,7 +52,7 @@ function App() {
   //******************************************** */
   async function openPopup(id) {
     try {
-      const data = await axios(apiurl + "&i=" + id);
+      const data = await axios(apiURL + "&i=" + id);
       let result = data.data;
 
       setState(prevState => {
