@@ -14,9 +14,8 @@ function App() {
 
   // insert better handling of the apiURL below
   //*******************************************/
-  
-  const apiURL = process.env.MOVIE_API_KEY;
-  console.log("api url is", apiURL);
+
+  const apiURL = process.env.REACT_APP_MOVIE_API_KEY;
 
   // use setstate to take in the search query
   //****************************************/
