@@ -5,19 +5,16 @@ import Search from "./components/Search";
 import Results from "./components/Results";
 import Popup from "./components/Popup";
 
-const dotenv = require("dotenv");
-
-// setup dotenv options
-dotenv.config({
-  path: "./.env"
-});
-
 function App() {
   const [state, setState] = useState({
     s: "",
     results: [],
     selected: {}
   });
+
+  // insert better handling of the apiURL below
+  //*******************************************/
+  
   const apiURL = process.env.MOVIE_API_KEY;
   console.log("api url is", apiURL);
 
@@ -47,7 +44,7 @@ function App() {
     }
   }
 
-  // async function that opens up a specific movie
+  // async function that opens up a specific movieimport env from ".././"
   // in a new window using the api call
   //******************************************** */
   async function openPopup(id) {
