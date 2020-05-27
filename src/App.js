@@ -73,10 +73,12 @@ function App() {
         <h1>Movie Database</h1>
       </header>
       <main>
+        {
+          //handle the search results, opening the pop up and closing the popup upon selection
+        }
         <Search handleInput={handleInput} search={search} />
 
         <Results results={state.results} openPopup={openPopup} />
-
         {typeof state.selected.Title !== "undefined" ? (
           <Popup selected={state.selected} closePopup={closePopup} />
         ) : (
