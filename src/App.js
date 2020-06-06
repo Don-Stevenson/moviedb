@@ -6,6 +6,8 @@ import Results from "./components/Results";
 import Popup from "./components/Popup";
 
 function App() {
+  //setting and handling the state through usestate
+  //***********************************************
   const [state, setState] = useState({
     s: "",
     results: [],
