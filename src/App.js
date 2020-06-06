@@ -12,8 +12,8 @@ function App() {
     selected: {}
   });
 
-  // insert better handling of the apiURL below
-  //*******************************************/
+  // handling of the apiURL from process.env
+  //****************************************
 
   const apiURL = process.env.REACT_APP_MOVIE_API_KEY;
 
@@ -28,7 +28,7 @@ function App() {
 
   // Async Await function to make a call to the api using axios.
   //  Set the results to the state using setState
-  //********************************************************** */
+  //**********************************************************/
   async function search(e) {
     try {
       if (e.key === "Enter") {
@@ -43,9 +43,9 @@ function App() {
     }
   }
 
-  // async function that opens up a specific movieimport env from ".././"
+  // async function that opens up a specific movie
   // in a new window using the api call
-  //******************************************** */
+  //*********************************************/
   async function openPopup(id) {
     try {
       const data = await axios(apiURL + "&i=" + id);
