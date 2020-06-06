@@ -10,6 +10,9 @@ function Popup({ selected, closePopup }) {
         </h2>
         <p className="rating">Rating: {selected.imdbRating}</p>
         <div className="plot">
+          {
+            // handling the image when no image is available
+          }
           <img
             src={selected.Poster}
             onError={e => {
