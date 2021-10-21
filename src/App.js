@@ -9,7 +9,7 @@ function App() {
   //setting and handling the state through usestate
   //***********************************************
   const [state, setState] = useState({
-    s: "",
+    searchVal: "",
     results: [],
     selected: {}
   });
@@ -22,9 +22,9 @@ function App() {
   // use setstate to take in the search query
   //****************************************/
   const handleInput = e => {
-    let s = e.target.value;
+    let searchVal = e.target.value;
     setState(prevState => {
-      return { ...prevState, s: s };
+      return { ...prevState, searchVal: searchVal };
     });
   };
 
@@ -34,7 +34,7 @@ function App() {
   async function search(e) {
     try {
       if (e.key === "Enter") {
-        const data = await axios(apiURL + "&s=" + state.s);
+        const data = await axios(apiURL + "&searchVal=" + state.searchVal);
         let results = data.data.Search;
         setState(prevState => {
           return { ...prevState, results: results };
